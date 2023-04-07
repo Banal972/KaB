@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css" />
+    <script src="./Kab0.01.js"></script>
+</head>
+
+<body style="font-family: pretendard; word-break: keep-all;">
+
+    <div class="container pt-5 pb-5">
+
+        <dl class="text-center mb-4">
+            <dt>
+                <h1>KaB</h1>
+            </dt>
+            <dd class="small">
+                ※ KaB는 잇다소프트에서 사용되는 프로젝트에 원할하게 사용됩니다.
+            </dd>
+        </dl>
+
+        <p class="small text-center">기본 사용법</p>
+<pre style="background: #000; border-radius: 1.5em;"><code style="color: #fff;">
+    &lt;script src="./Kab.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+        kab.start({
+            duration : 1, // 기본값은 1초 입니다. kab-duration 로 조절 할수있지마 전체 조절을 의미합니다.
+            marker : true, // 마커가 어디서 찍히는지 파악할수있게 됩니다.
+        });
+    &lt;/script&gt;
+</code>
+</pre>
+
+    </div>
+
+    <hr>
+
+    <div class="container text-center pt-5" style="padding-bottom: 10em;">
+
+        <dl class="text-center">
+            <dt>
+                <h3>Fade</h3>
+            </dt>
+            <dd class="small">
+                일반적인 Fade in-out 효과
+            </dd>
+        </dl>
+
+        <div style="margin-top: 10em;">
+
+            <h4 class="mb-4">Fade-up</h4>
+            <div kab-fade="up" style="width: 250px; height: 250px; background: tomato; margin: 0 auto; display: flex; align-items: center; justify-content: center;">
+                <code style="color: #fff;">
+                    &lt;div kab-fade="up"&gt;
+                </code>
+            </div>
+
+        </div>
+
+        <div style="margin-top: 10em;">
+
+            <h4 class="mb-4">Fade-bottom</h4>
+            <div kab-fade="bottom" style="width: 250px; height: 250px; background: tomato; margin: 0 auto; display: flex; align-items: center; justify-content: center;">
+                <code style="color: #fff;">
+                    &lt;div kab-fade="bottom"&gt;
+                </code>
+            </div>
+
+        </div>
+
+        <div style="margin-top: 10em;">
+
+            <h4 class="mb-4">Fade-left</h4>
+            <div kab-fade="left" style="width: 250px; height: 250px; background: tomato; margin: 0 auto; display: flex; align-items: center; justify-content: center;">
+                <code style="color: #fff;">
+                    &lt;div kab-fade="left"&gt;
+                </code>
+            </div>
+
+        </div>
+
+        <div style="margin-top: 10em;">
+
+            <h4 class="mb-4">Fade-right</h4>
+            <div kab-fade="right" style="width: 250px; height: 250px; background: tomato; margin: 0 auto; display: flex; align-items: center; justify-content: center;">
+                <code style="color: #fff;">
+                    &lt;div kab-fade="right"&gt;
+                </code>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="container text-center pt-5 startTest" style="padding-bottom: 10em;">
+
+        <dl class="text-center">
+            <dt>
+                <h3>Utils</h3>
+            </dt>
+            <dd class="small">
+                kab 를 하용하기 간편한 유틸 사용법
+            </dd>
+        </dl>
+
+        <div style="margin-top: 10em;">
+
+            <h4 class="mb-2">Delay</h4>
+            <p class="mb-4">애니메이션 딜레이를 줄수있습니다. 예를 들어 1은 1초 3은 3초 입니다.</p>
+            <div kab-fade="up" kab-delay="3" style="width: 250px; height: 250px; background: tomato; margin: 0 auto; display: flex; align-items: center; justify-content: center;" class="p-2">
+                <code style="color: #fff;">
+                    &lt;div kab-fade="up" kab-delay="3" &gt;
+                </code>
+            </div>
+
+        </div>
+
+        <div style="margin-top: 10em;">
+
+            <h4 class="mb-2">Start</h4>
+            <p class="mb-4">
+                애니메이션 시작 위치를 설정 할수있습니다. .클래스이름 을 넣어주면 그 클래스를 기준으로 애니메이션이 실행 됩니다.
+            </p>
+            <div kab-fade="up" kab-start=".startTest" style="width: 250px; height: 250px; background: tomato; margin: 0 auto; display: flex; align-items: center; justify-content: center;" class="p-2">
+                <code style="color: #fff;">
+                    &lt;div kab-fade="up" kab-start=".startTest" &gt;
+                </code>
+            </div>
+
+        </div>
+
+        <div style="margin-top: 10em;">
+
+            <h4 class="mb-4">Duration</h4>
+            <p class="mb-4">
+                애니메이션 속도를 조절할수 있습니다.
+            </p>
+            <div kab-fade="up" kab-duration="1.6" style="width: 250px; height: 250px; background: tomato; margin: 0 auto; display: flex; align-items: center; justify-content: center;" class="p-2">
+                <code style="color: #fff;">
+                    &lt;div kab-fade="up" kab-duration="1.6"&gt;
+                </code>
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer style="background: #222222; color: #fff;" class="pt-4 pb-4">
+        <div class="container small text-center">
+
+            <ul class="list-inline">
+                <li class="list-inline-item">Author - BANAL</li>
+                <li class="list-inline-item">Ver - 0.0.1</li>
+                <li class="list-inline-item"><a class="link-info link-underline link-underline-opacity-0" href="https://github.com/Borken972">Github</a></li>
+            </ul>
+
+            <p>
+                초기버전으로 많은 버그들이 있을수 있습니다. 즉 필시로 수정될 가능성이 높기때문에
+                자주 업데이트 하시는걸 추천드립니다.
+                <br>
+                버그 관련된 사항 과 개선점은 <a class="link-info link-underline link-underline-opacity-0" href="https://github.com/Borken972">https://github.com/Borken972</a> 으로 알려주세요.
+            </p>
+
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        kab.start();
+    </script>
+
+</body>
+
+</html>
